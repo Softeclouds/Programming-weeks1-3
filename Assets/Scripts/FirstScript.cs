@@ -19,7 +19,7 @@ public class FirstScript : MonoBehaviour
 
         Vector2 squareInScreenSpace = Camera.main.WorldToScreenPoint(pos);
 
-        if(squareInScreenSpace.x < -10 || squareInScreenSpace.x > Screen.width)
+        if(squareInScreenSpace.x < 0 || squareInScreenSpace.x > Screen.width)
         {
             speed = speed * -1;
         }
