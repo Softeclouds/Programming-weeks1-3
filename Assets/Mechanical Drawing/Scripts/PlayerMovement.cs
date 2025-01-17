@@ -14,28 +14,27 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 pos = transform.position;
-        if (Input.GetKey(KeyCode.D))
+        Vector2 pos = transform.position;       // Create new Vector2 called pos that is equal to the obejcts position
+        if (Input.GetKey(KeyCode.D))            // if either D, A, W, or S are pressed, move character accordingly with speed
         {
-            pos.x += speed;
+            pos.x += speed * Time.deltaTime;    // Time.deltaTime is used to keep the movement consistent, instead of using the framerate, which could cause inconsistent movement
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            pos.x -= speed;
+            pos.x -= speed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            pos.y += speed;
+            pos.y += speed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            pos.y -= speed;
+            pos.y -= speed * Time.deltaTime;
         }
 
-        Vector2 squareInScreenSpace = Camera.main.WorldToScreenPoint(pos);
-        transform.position = pos;
+        transform.position = pos;             // the objects position is set to the pos vector
     }
 }
