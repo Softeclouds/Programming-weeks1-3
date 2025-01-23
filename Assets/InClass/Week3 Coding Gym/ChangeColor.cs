@@ -5,12 +5,11 @@ using UnityEngine;
 public class ChangeColor : MonoBehaviour
 {
     public SpriteRenderer sr;
-    public GameObject sprite;
-    public Circle circle;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -22,6 +21,10 @@ public class ChangeColor : MonoBehaviour
     void OnMouseOver()
     {
         sr.color = Color.red;
+        if(Input.GetMouseButtonDown(0))
+        {
+          
+        }
     }
 
     void OnMouseExit()
@@ -29,16 +32,5 @@ public class ChangeColor : MonoBehaviour
         sr.color = Color.white;
     }
 
-    void spawn()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            Instantiate(sprite);
-        }
-    }
-
-    void destroy()
-    {
-
-    }
+    
 }

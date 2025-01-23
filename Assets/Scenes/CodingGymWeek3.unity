@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 1252455537}
-  sprite: {fileID: 0}
+  sprite: {fileID: 1252455535}
   circle: {fileID: 0}
 --- !u!212 &1252455537
 SpriteRenderer:
