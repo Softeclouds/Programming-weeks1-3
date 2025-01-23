@@ -1,16 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public bool followPlayer = false;
-    bool isOver;
-
+    bool wasOver;
+    public float boundry = 1;
+    public float offset = 1;
 
     SpriteRenderer sr;
     public GameObject pixie;
+
+
+    [Range(0, 1)]
+    public float t;
+
+    public AnimationCurve curve;
+
+    public Transform start;
+    public Transform end;
 
     // Start is called before the first frame update
     void Start()
@@ -22,23 +33,28 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        t += Time.deltaTime;
+        if (t > 1)
+        {
+            t = 0;
+        }
+
         Vector2 pixiePos = pixie.transform.position;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if(mousePos.x >= pixiePos.x - 1 && mousePos.x <= pixiePos.x +1 && mousePos.y >= pixiePos.y - 1 && mousePos.y <= pixiePos.y + 1)
+        if(mousePos.x >= pixiePos.x - boundry && mousePos.x <= pixiePos.x + boundry && mousePos.y >= pixiePos.y - boundry && mousePos.y <= pixiePos.y + boundry)
         {
-            isOver = true;
+            wasOver = true;
         }
-        else
-        {
-            isOver = false;
-        }
+     
 
-        Debug.Log("Mouse: " + mousePos + "Pixie: " + pixiePos + isOver);
+        Debug.Log("Mouse: " + mousePos + "Pixie: " + pixiePos + wasOver);
         
-        if (isOver)
+        if (wasOver)
         {
-            followPlayer = true;
+            //lerp pixie pos to player pos
+            transform.position = Vector2.Lerp(start.position, end.position, curve.Evaluate(t)/offset);
         }
     }
 }
