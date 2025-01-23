@@ -168,11 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundry: 0.5
-  offset: 5
   pixie: {fileID: 6310988}
   speed: 1
-  start: {fileID: 6310989}
-  end: {fileID: 903395517}
+  currentPos: {fileID: 6310989}
+  playerPos: {fileID: 903395517}
 --- !u!1 &61838575
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,11 +519,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundry: 0.5
-  offset: 6
   pixie: {fileID: 539264998}
   speed: 3
-  start: {fileID: 539265000}
-  end: {fileID: 903395517}
+  currentPos: {fileID: 539265000}
+  playerPos: {fileID: 903395517}
 --- !u!4 &539265000
 Transform:
   m_ObjectHideFlags: 0
@@ -739,11 +737,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundry: 0.5
-  offset: 6
   pixie: {fileID: 810086418}
   speed: 2
-  start: {fileID: 810086420}
-  end: {fileID: 903395517}
+  currentPos: {fileID: 810086420}
+  playerPos: {fileID: 903395517}
 --- !u!4 &810086420
 Transform:
   m_ObjectHideFlags: 0
@@ -1315,11 +1312,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundry: 0.5
-  offset: 6
   pixie: {fileID: 1050999373}
   speed: 1.5
-  start: {fileID: 1050999375}
-  end: {fileID: 903395517}
+  currentPos: {fileID: 1050999375}
+  playerPos: {fileID: 903395517}
 --- !u!4 &1050999375
 Transform:
   m_ObjectHideFlags: 0
@@ -1905,11 +1901,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundry: 0.5
-  offset: 6
   pixie: {fileID: 1540361697}
   speed: 0.75
-  start: {fileID: 1540361699}
-  end: {fileID: 903395517}
+  currentPos: {fileID: 1540361699}
+  playerPos: {fileID: 903395517}
 --- !u!4 &1540361699
 Transform:
   m_ObjectHideFlags: 0
@@ -2189,11 +2184,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundry: 0.5
-  offset: 6
   pixie: {fileID: 1819124069}
   speed: 2.5
-  start: {fileID: 1819124071}
-  end: {fileID: 903395517}
+  currentPos: {fileID: 1819124071}
+  playerPos: {fileID: 903395517}
 --- !u!4 &1819124071
 Transform:
   m_ObjectHideFlags: 0

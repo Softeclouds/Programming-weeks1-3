@@ -16,10 +16,12 @@ public class PixieIdle : MonoBehaviour
     void Update()
     {
         t += Time.deltaTime;
+        // Restart t once its bigger than 1 to loop the animation curve
         if (t > 1)
         {
             t = 0;
         }
+        // Make the curve affect only the Y axis, to make the pixie flutter up and down
         Vector2 pos = transform.localPosition;
         pos.y = curve.Evaluate(t);
         transform.localPosition = pos;
