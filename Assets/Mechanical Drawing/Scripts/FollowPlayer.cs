@@ -7,18 +7,14 @@ using UnityEngine.UIElements;
 
 public class FollowPlayer : MonoBehaviour
 {
-    bool wasOver;
+    bool wasOver; 
     public float boundry = 1;
     public float offset = 1;
 
     SpriteRenderer sr;
     public GameObject pixie;
 
-
-    [Range(0, 1)]
-    public float t;
-
-    public AnimationCurve curve;
+    public float speed = 1f;
 
     public Transform start;
     public Transform end;
@@ -27,18 +23,11 @@ public class FollowPlayer : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        t += Time.deltaTime;
-        if (t > 1)
-        {
-            t = 0;
-        }
 
         Vector2 pixiePos = pixie.transform.position;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -54,7 +43,7 @@ public class FollowPlayer : MonoBehaviour
         if (wasOver)
         {
             //lerp pixie pos to player pos
-            transform.position = Vector2.Lerp(start.position, end.position, curve.Evaluate(t)/offset);
+            transform.position = Vector2.Lerp(start.position, end.position, speed * Time.deltaTime);
         }
     }
 }
