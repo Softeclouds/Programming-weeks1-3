@@ -170,8 +170,6 @@ MonoBehaviour:
   boundry: 0.5
   pixie: {fileID: 6310988}
   speed: 1
-  currentPos: {fileID: 6310989}
-  playerPos: {fileID: 903395517}
 --- !u!1 &61838575
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,8 +519,6 @@ MonoBehaviour:
   boundry: 0.5
   pixie: {fileID: 539264998}
   speed: 3
-  currentPos: {fileID: 539265000}
-  playerPos: {fileID: 903395517}
 --- !u!4 &539265000
 Transform:
   m_ObjectHideFlags: 0
@@ -739,8 +735,6 @@ MonoBehaviour:
   boundry: 0.5
   pixie: {fileID: 810086418}
   speed: 2
-  currentPos: {fileID: 810086420}
-  playerPos: {fileID: 903395517}
 --- !u!4 &810086420
 Transform:
   m_ObjectHideFlags: 0
@@ -913,7 +907,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7247ae062d767fd4e960077882cd5302, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -934,8 +928,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.39, y: 1.39, z: 1.39}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 903395517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1314,8 +1308,6 @@ MonoBehaviour:
   boundry: 0.5
   pixie: {fileID: 1050999373}
   speed: 1.5
-  currentPos: {fileID: 1050999375}
-  playerPos: {fileID: 903395517}
 --- !u!4 &1050999375
 Transform:
   m_ObjectHideFlags: 0
@@ -1903,8 +1895,6 @@ MonoBehaviour:
   boundry: 0.5
   pixie: {fileID: 1540361697}
   speed: 0.75
-  currentPos: {fileID: 1540361699}
-  playerPos: {fileID: 903395517}
 --- !u!4 &1540361699
 Transform:
   m_ObjectHideFlags: 0
@@ -2186,8 +2176,6 @@ MonoBehaviour:
   boundry: 0.5
   pixie: {fileID: 1819124069}
   speed: 2.5
-  currentPos: {fileID: 1819124071}
-  playerPos: {fileID: 903395517}
 --- !u!4 &1819124071
 Transform:
   m_ObjectHideFlags: 0
